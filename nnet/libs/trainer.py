@@ -2,8 +2,6 @@ import os
 import sys
 import time
 
-from collections import defaultdict
-
 import torch as th
 import torch.nn.functional as F
 from torch.optim.lr_scheduler import ReduceLROnPlateau
