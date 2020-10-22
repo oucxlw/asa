@@ -13,21 +13,17 @@ To optimize the memory during training process, the [memonger](https://github.co
     
 # Usage
 
-- Training: configure the [conf.py](https://github.com/jyhan03/channel-decorrelation/blob/master/nnet/conf.py) and run `sh train.sh 0 cd_adap`.	
-- Evaluate & Separate: modify the corresponding data of [decode.sh](https://github.com/jyhan03/channel-decorrelation/blob/master/decode.sh) and run `sh decode.sh cd_adap`.
+- Training: configure the [conf.py](https://github.com/jyhan03/asa/blob/master/nnet/conf.py) and run `sh train.sh 0 asa`.	
+- Evaluate: modify the corresponding data of [decode.sh](https://github.com/jyhan03/asa/blob/master/decode.sh) and run `sh decode.sh asa`.
 
 # Results
 
-| System | IPD  | Adap | SDR/SiSDR |
-| :------| :--: | :--: | :-------: |  
-|(0) TD-SpkBeam | - | - | 11.51 / 11.00 |
-|(1)   |   Y   | -   | 11.57 / 11.07 |
-|(2) Parallel  |   -   | -   | 12.43 / 11.91 |
-|(3)  |  -    | Y   | 12.73 / 12.20 |
-|(4) CD  |  -    | -   | 12.87 / 12.34 |
-|(5)   |     - | Y   | 12.87 / 12.35 |
-|(6)   |   Y   | Y   | 12.55 / 12.01 |
-|(7) CC  |    -  | Y   | 12.66 / 12.13 |
+| System | IPD  | FF | MM | FM | Avg |
+| :------| :--: |:--:|:--:|:--:|:--: |   
+|(0) TSB | - | 9.43 / 8.84 | 10.02 / 9.52 | 12.54 / 12.06 | 11.26 / 10.76 |
+|(1)   |   Y   | 10.01 / 9.46 | 10.51 / 10.02 | 12.80 / 12.31 | 11.65 / 11.15 |
+|(2) ASA | - | 9.78 / 9.23 | 10.36 / 9.86 | 12.78 / 12.29 | 11.55 / 11.05|
+|(3) ASA (MP) |  -  | 9.83 / 9.26 | 10.47 / 9.97 | 12.89 / 12.40 | 11.65 / 11.15 |
 
 
 # Contact
